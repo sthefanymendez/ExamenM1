@@ -1,0 +1,23 @@
+{
+  "name": "m1-exam",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --collectCoverage=false"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joseluiscrr/M1-exam.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joseluiscrr/M1-exam/issues"
+  },
+  "homepage": "https://github.com/joseluiscrr/M1-exam#readme",
+  "dependencies": {
+    "jest": "^28.1.1"
+  }
+}
