@@ -40,25 +40,7 @@ Stack.prototype.size = function () {
  */
 function tipologiasSeparadas(tipologias) {
   // Tu código aquí
-  var miStack = new Stack()
-
-  var repetidos = []
-
-  if (tipologias.length === 0) return 'Tipologías inexistentes'
-
-  for (var i = 0; i < tipologias.length; i++) {
-    if (tipologias[i] === tipologias[i + 1])
-      repetidos.push(tipologias[i])
-    else miStack.push(tipologias[i])
-  }
-
-  for (var j = 0; j < repetidos.length; j++) {
-    if (repetidos.length > 0) miStack.push(repetidos[j])
-  }
-
-  if (repetidos.length === 0) return "No hay tipologías repetidas"
-
-  return miStack
+  
 }
 
 module.exports = {

@@ -94,17 +94,7 @@ function Node(valor) {
  */
 LinkedList.prototype.mapHouses = function (value) {
   // Tu código aquí
-  if (!this.head) return false
-
-  var list = new LinkedList(value)
-  var current = this.head
-
-  while (current) {
-    current.value = value;
-    current = current.next;
-  }
-
-  return list
+  
 }
 
 module.exports = {

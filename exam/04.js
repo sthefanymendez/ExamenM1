@@ -27,26 +27,6 @@
  */
 function construccionCasas(bolsasDeCemento) {
   // Tu código aquí
-  return function(cantidadDeCasas) {
-    if (cantidadDeCasas <= 0) {
-      return "Por favor ingresar cuantas casas quieres construir"
-    }
-
-    const bolsasPorCasa = 10
-    const casasPosibles = Math.floor(bolsasDeCemento / bolsasPorCasa)
-
-    if (bolsasDeCemento % bolsasPorCasa !== 0) {
-      return "No se puede construir casas con esa cantidad de bolsas"
-    }
-
-    if (cantidadDeCasas > casasPosibles) {
-      return `Solo puedes construir esta cantidad de casas: ${casasPosibles}`
-    }
-
-    if (cantidadDeCasas === casasPosibles) {
-      return true
-    }
-  }
 }
 
 module.exports = {

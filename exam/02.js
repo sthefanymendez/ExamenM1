@@ -26,18 +26,7 @@
  */
 const calcularImpuestos = boletas => {
   // Tu código aquí
-  if (!Array.isArray(boletas)) return "Error"
-
-  if (boletas.length === 0) return false
-
-  let total = 0
-
-  for (const boleta of boletas) {
-    if (typeof boleta !== "number") return "Error"
-    total += boleta
-  }
-
-  return total
+  
 }
 
 

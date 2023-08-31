@@ -29,37 +29,13 @@ function sortPrimeHouses(array) {
   // Tu código aquí
 
   // Función para verificar si un número es primo
-  function isPrime(num) {
-    if (num <= 1) {
-      return false;
-    }
-    for (let i = 2; i <= Math.sqrt(num); i++) {
-      if (num % i === 0) {
-        return false;
-      }
-    }
-    return true;
-  }
+  
 
   // Verificar si hay números no primos en el array
-  for (const num of array) {
-    if (!isPrime(num)) {
-      return false;
-    }
-  }
+  
 
   // Algoritmo de ordenamiento (Bubble Sort)
-  for (let i = 0; i < array.length - 1; i++) {
-    for (let j = 0; j < array.length - i - 1; j++) {
-      if (array[j] > array[j + 1]) {
-        const temp = array[j];
-        array[j] = array[j + 1];
-        array[j + 1] = temp;
-      }
-    }
-  }
-
-  return array
+  
 }
 
 module.exports = {
