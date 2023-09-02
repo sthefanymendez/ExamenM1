@@ -95,7 +95,30 @@ function Node(valor) {
  */
 LinkedList.prototype.sliceRooms = function(indexStart, indexEnd) {
   // Tu código aquí
-  
+  const startNode = this.search(indexStart)
+  const endNode = this.search(indexEnd)
+
+  if (!startNode || !endNode) return false
+
+  var newLinkedList = new LinkedList()
+  var currentNode = this.head
+  var startIndexFound = false
+
+  while (currentNode !== null) {
+    if (currentNode.value === indexStart) {
+      startIndexFound = true
+      currentNode = currentNode.next
+      continue
+    }
+
+    if (currentNode.value === indexEnd) break
+
+    if (startIndexFound) newLinkedList.add(currentNode.value)
+
+    currentNode = currentNode.next;
+  }
+
+  return newLinkedList
 }
 
 module.exports = {

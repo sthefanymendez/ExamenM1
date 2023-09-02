@@ -40,8 +40,45 @@ Stack.prototype.size = function () {
  */
 function tipologiasSeparadas(tipologias) {
   // Tu código aquí
-  
+  let oneStack = new Stack()
+  let repeated = []
+
+  if (tipologias.length === 0){
+    return "Tipologías inexistentes"
+  }
+
+  for(var i = 0; i < tipologias.length; i++){
+    if (tipologias[i] === tipologias[i + 1])
+      repeated.push(tipologias[i])
+    else oneStack.push(tipologias[i])
+  }
+  for (var j = 0; j < repeated.length; j++){
+    if(repeated.length > 0) oneStack.push(repeated[j])
+  } 
+  if (repeated.length === 0) return "No hay tipologías repetidas"
+
+  return oneStack
 }
+// var miStack = new Stack()
+
+// var repetidos = []
+
+// if (tipologias.length === 0) return 'Tipologías inexistentes'
+
+// for (var i = 0; i < tipologias.length; i++) {
+//   if (tipologias[i] === tipologias[i + 1])
+//     repetidos.push(tipologias[i])
+//   else miStack.push(tipologias[i])
+// }
+
+// for (var j = 0; j < repetidos.length; j++) {
+//   if (repetidos.length > 0) miStack.push(repetidos[j])
+// }
+
+// if (repetidos.length === 0) return "No hay tipologías repetidas"
+
+// return miStack
+// }
 
 module.exports = {
   Stack,

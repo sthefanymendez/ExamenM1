@@ -79,7 +79,13 @@ BinarySearchTree.prototype.size = function() {
  */
 BinarySearchTree.prototype.spotHousePrices = function (target, result = []) {
   // Tu código aquí:
+  if (this.value > target) result.push(this.value)
   
+  if (this.left) this.left.spotHousePrices(target, result)
+  
+  if (this.right) this.right.spotHousePrices(target, result)
+  
+  return result
 }
 
 module.exports = {

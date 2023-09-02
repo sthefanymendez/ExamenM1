@@ -51,7 +51,20 @@ Queue.prototype.size = function() {
  */
 function party(array) {
   // Tu código aquí
+
+  const verifiedguests = new Queue()
   
+  for (const guest of array) {
+    if (guest.ticket === "VIP" && guest.status === "Known") {
+      verifiedguests.enqueue(guest)
+    }
+  }
+
+  if (verifiedguests.size()=== 0) {
+    return false;
+  }
+  
+  return verifiedguests
 }
 
 module.exports = {

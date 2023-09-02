@@ -27,6 +27,18 @@
 const calcularImpuestos = boletas => {
   // Tu código aquí
   
+  if(boletas.length === 0) return false
+  
+  if(!Array.isArray(boletas)) return "Error"
+
+  let result = 0
+
+  for(const ticket of boletas) {
+    if(typeof ticket !== "number") return "Error"
+    result += ticket
+  }
+  
+  return  result;
 }
 
 

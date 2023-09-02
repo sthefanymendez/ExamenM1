@@ -81,7 +81,19 @@ BinarySearchTree.prototype.size = function() {
  */
 BinarySearchTree.prototype.getHouseValues = function (side, total = 0) {
   // Tu código aquí:
+  if (side === "left") {
+    if (this.left) {
+      total += this.left.value;
+      total = this.left.getHouseValues(side, total);
+    }
+  } else if (side === "right") {
+    if (this.right) {
+      total += this.right.value;
+      total = this.right.getHouseValues(side, total);
+    }
+  }
   
+  return total
 }
 
 // ⚠️ NO MODIFICAR NADA POR DEBAJO DE ESTA LÍNEA ⚠️
