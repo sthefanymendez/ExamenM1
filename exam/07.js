@@ -52,7 +52,7 @@ LinkedList.prototype.search = function (arg) {
 
     nodoActual = nodoActual.next
   }
-
+  
   return null
 }
 
